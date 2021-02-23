@@ -79,7 +79,7 @@ ga_domain: xxx.com
 # Sidebar settings
 sidebar: true                           # whether or not using Sidebar.
 sidebar-about-description: "马赛尔，NBA player，Programmer <br> An NBA player， Programmer."
-sidebar-avatar: /img/avatar-hux-ny.jpg      # use absolute URL, seeing it's used in both `/` and `/about/`
+sidebar-avatar: /img/艾伦耶格尔.jpg      # use absolute URL, seeing it's used in both `/` and `/about/`
 
 
 
