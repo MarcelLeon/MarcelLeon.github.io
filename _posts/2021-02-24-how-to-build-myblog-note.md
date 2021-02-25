@@ -3,7 +3,7 @@ layout: post
 title: "Hello my Blog"
 subtitle: ""
 author: "Marshall"
-header-img: "img/post-bg-halting.jpg"
+header-img: "img/post-bg-web.jpg"
 header-mask: 0.3
 tags:
   - 自我救赎
