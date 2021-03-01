@@ -5,12 +5,7 @@ Live in LiuShaHe.
 
 ##### Appearence
 
-- [Upgrading to Progressive Web Apps][9] · [JSConf China Shanghai 2017](http://2017.jsconf.cn/)
-- Building Progressive Web Apps · [CSDI Guangzhou 2017](http://www.csdisummit.com/)
-- [Service Worker 101][5] · GDG DevFest Beijing 2016
-- [Progressive Web Apps][4] · QCon Shanghai 2016
-- [CSS Still Sucks 2015][2] · 2015
-- [JavaScript Modularization Journey][1] · 2015
+> *TODO...*
 
 [1]: //huangxuan.me/2015/07/09/js-module-7day/
 [2]: //huangxuan.me/2015/12/28/css-sucks-2015/

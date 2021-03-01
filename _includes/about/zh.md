@@ -1,16 +1,11 @@
-Hi，我是Marcel Leon，一个资深码农，爱好流式计算
+Hi，我是Marcel Leon，一个资深后端码农，爱好流式计算
 
 目前的物理活动范围主要在流沙河附近
 
 
 ##### 演讲与分享
 
-- [Upgrading to Progressive Web Apps][9] · [JSConf CN 上海 2017](http://2017.jsconf.cn/)
-- Building Progressive Web Apps · [CSDI 广州 2017](http://www.csdisummit.com/)
-- [Service Worker 101][5] · GDG DevFest 北京 2016
-- [Progressive Web App，复兴序章][4] · [QCon 上海 2016](http://2016.qconshanghai.com/presentation/3111)
-- [CSS Still Sucks 2015][2] · 2015
-- [JavaScript 模块化七日谈][1] · 2015
+> *TODO...*
 
 [1]: //huangxuan.me/2015/07/09/js-module-7day/
 [2]: //huangxuan.me/2015/12/28/css-sucks-2015/

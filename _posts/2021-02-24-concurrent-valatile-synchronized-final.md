@@ -13,13 +13,12 @@ tags:
 
 *java基础-并发编程*
 
-
 ## 本文将回答哪些问题：
-volatile、synchronized、final这几个关键字的作用？
+**volatile、synchronized、final这几个关键字的作用？**
 
-volatile、synchronized、final底层原理是什么？
+**volatile、synchronized、final底层原理是什么？**
 
-面试中会怎么问这些关键字？
+**面试中会怎么问这些关键字？**
 
 ## 背景简介
 自学+面试心得

@@ -7,6 +7,7 @@ header-img: "img/post-bg-web.jpg"
 header-mask: 0.3
 tags:
   - 自我救赎
+  - 笔记
 ---
 
 *Hello Blog*
