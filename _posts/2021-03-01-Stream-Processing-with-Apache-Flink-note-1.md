@@ -1,7 +1,7 @@
 ---
 layout: post
-title: "流式计算历史"
-subtitle: "History of Stream Processing"
+title: "数据处理历史（Stream Processing with Apache Flink-1）"
+subtitle: "A bit of history"
 author: "Marshall"
 header-img: "img/squirrel-eat.jpeg"
 header-mask: 0.3
@@ -11,6 +11,6 @@ tags:
   - 读书笔记
 ---
 
-### 流式计算历史
+### 数据处理历史
 
-![](/img/dataflow-programing.png)
+![](/img/Chapter1-data-process-architecture.png)
