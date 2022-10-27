@@ -5,7 +5,7 @@ subtitle: ""
 author: "Marshall"
 header-img: "img/post-bg-miui6.jpg"
 header-mask: 0.3
-hidden: true
+hidden: false
 tags:
   - JAVA
   - 笔记
