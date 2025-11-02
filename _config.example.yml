@@ -1,0 +1,103 @@
+# Integrations Configuration Examples
+# Copy the sections you need to _config.yml
+
+# ===========================
+# Analytics Integrations
+# ===========================
+
+# Google Analytics
+ga_track_id: 'UA-xxxxxx-xx'
+ga_domain: yourdomain.com
+
+# Baidu Analytics (optional)
+# ba_track_id: 'your-baidu-track-id'
+
+# ===========================
+# Comments Integrations
+# ===========================
+
+# Disqus Comments
+disqus_username: your-disqus-shortname
+
+# Netease Comments (optional, deprecated)
+netease_comment: false
+
+# ===========================
+# Custom Integrations
+# ===========================
+
+integrations:
+  # Dify AI Assistant Integration
+  dify:
+    enabled: false  # Set to true to enable
+    type: iframe    # 'iframe' or 'script'
+    url: "https://your-dify-instance.com/chatbot/embed"
+    style: "position: fixed; bottom: 20px; right: 20px; width: 400px; height: 600px; border: none; border-radius: 10px; box-shadow: 0 4px 6px rgba(0,0,0,0.1); z-index: 9999;"
+    id: "dify-chatbot"
+    class: "dify-iframe"
+
+    # Alternative: If using script type
+    # type: script
+    # url: "https://your-dify-instance.com/chatbot.js"
+    # init_script: |
+    #   window.difyChatbotConfig = {
+    #     token: 'your-token-here',
+    #     position: 'bottom-right',
+    #     theme: 'light'
+    #   };
+
+  # Custom Scripts
+  # Add any custom JavaScript or third-party integrations here
+  custom_scripts:
+    # Example 1: External script for all pages
+    - name: "Custom Analytics Helper"
+      enabled: false
+      type: external
+      url: "https://cdn.example.com/analytics-helper.js"
+      position: all  # 'all', 'post', 'page', or specific layout name
+      async: true
+      defer: false
+
+    # Example 2: Inline script for post pages only
+    - name: "Post View Tracker"
+      enabled: false
+      type: inline
+      position: post
+      content: |
+        // Track post views
+        console.log('Post page loaded:', document.title);
+        // Add your custom tracking code here
+
+    # Example 3: Chatbot widget
+    - name: "Live Chat Widget"
+      enabled: false
+      type: external
+      url: "https://chat-provider.com/widget.js"
+      position: all
+      async: true
+      defer: true
+
+# ===========================
+# Example: Full Dify Setup
+# ===========================
+
+# Option 1: Dify as floating chatbot (iframe)
+# integrations:
+#   dify:
+#     enabled: true
+#     type: iframe
+#     url: "https://cloud.dify.ai/chatbot/xxxxx"
+#     style: "position: fixed; bottom: 20px; right: 20px; width: 350px; height: 500px; border: none; box-shadow: 0 2px 10px rgba(0,0,0,0.2); z-index: 9999;"
+
+# Option 2: Dify embedded in page (script)
+# integrations:
+#   dify:
+#     enabled: true
+#     type: script
+#     url: "https://cloud.dify.ai/embed.js"
+#     init_script: |
+#       window.difyConfig = {
+#         appId: 'your-app-id',
+#         title: 'AI Assistant',
+#         theme: 'auto'
+#       };

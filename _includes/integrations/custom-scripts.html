@@ -1,0 +1,42 @@
+<!-- Custom Third-Party Integrations -->
+<!-- This file is for custom integrations like Dify, chatbots, etc. -->
+
+{% if site.integrations %}
+  {% if site.integrations.dify and site.integrations.dify.enabled %}
+  <!-- Dify Integration -->
+  <div id="dify-container" class="dify-integration">
+    {% if site.integrations.dify.type == 'iframe' %}
+      <iframe
+        src="{{ site.integrations.dify.url }}"
+        style="{{ site.integrations.dify.style | default: 'width: 100%; height: 600px; border: none;' }}"
+        {% if site.integrations.dify.id %}id="{{ site.integrations.dify.id }}"{% endif %}
+        {% if site.integrations.dify.class %}class="{{ site.integrations.dify.class }}"{% endif %}
+      ></iframe>
+    {% elsif site.integrations.dify.type == 'script' %}
+      <script src="{{ site.integrations.dify.url }}"></script>
+      {% if site.integrations.dify.init_script %}
+      <script>
+        {{ site.integrations.dify.init_script }}
+      </script>
+      {% endif %}
+    {% endif %}
+  </div>
+  {% endif %}
+
+  {% if site.integrations.custom_scripts %}
+    {% for script in site.integrations.custom_scripts %}
+    <!-- Custom Script: {{ script.name }} -->
+    {% if script.enabled %}
+      {% if script.position == page.layout or script.position == 'all' %}
+        {% if script.type == 'inline' %}
+        <script>
+          {{ script.content }}
+        </script>
+        {% elsif script.type == 'external' %}
+        <script src="{{ script.url }}" {% if script.async %}async{% endif %} {% if script.defer %}defer{% endif %}></script>
+        {% endif %}
+      {% endif %}
+    {% endif %}
+    {% endfor %}
+  {% endif %}
+{% endif %}
