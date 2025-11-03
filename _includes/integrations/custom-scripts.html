@@ -4,11 +4,26 @@
 {% if site.integrations %}
   {% if site.integrations.dify and site.integrations.dify.enabled %}
   <!-- Dify Integration -->
+  {% comment %} Check if should display on current page {% endcomment %}
+  {% assign show_dify = false %}
+  {% if site.integrations.dify.pages %}
+    {% for allowed_page in site.integrations.dify.pages %}
+      {% if page.title == allowed_page or page.layout == allowed_page or page.url contains allowed_page %}
+        {% assign show_dify = true %}
+      {% endif %}
+    {% endfor %}
+  {% else %}
+    {% assign show_dify = true %}
+  {% endif %}
+
+  {% if show_dify %}
   <div id="dify-container" class="dify-integration">
     {% if site.integrations.dify.type == 'iframe' %}
       <iframe
         src="{{ site.integrations.dify.url }}"
         style="{{ site.integrations.dify.style | default: 'width: 100%; height: 600px; border: none;' }}"
+        {% if site.integrations.dify.frameborder %}frameborder="{{ site.integrations.dify.frameborder }}"{% else %}frameborder="0"{% endif %}
+        {% if site.integrations.dify.allow %}allow="{{ site.integrations.dify.allow }}"{% endif %}
         {% if site.integrations.dify.id %}id="{{ site.integrations.dify.id }}"{% endif %}
         {% if site.integrations.dify.class %}class="{{ site.integrations.dify.class }}"{% endif %}
       ></iframe>
@@ -21,6 +36,7 @@
       {% endif %}
     {% endif %}
   </div>
+  {% endif %}
   {% endif %}
 
   {% if site.integrations.custom_scripts %}

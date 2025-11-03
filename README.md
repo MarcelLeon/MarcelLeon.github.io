@@ -182,9 +182,36 @@ MarcelLeon.github.io/
 
 ### 📦 集成 Dify 示例
 
-#### 方式 1：悬浮聊天窗口（iframe）
+本项目已集成 Dify AI 助手，并在**关于页面**（`about.html`）中展示。
 
-在 `_config.yml` 中添加：
+#### 当前配置（已生效）
+
+在 `_config.yml` 中的实际配置：
+
+```yaml
+integrations:
+  dify:
+    enabled: true
+    type: iframe
+    url: "https://udify.app/chatbot/oEDhhCAsJ1Hpem4s"
+    style: "width: 100%; height: 100%; min-height: 700px"
+    frameborder: "0"
+    allow: "microphone"
+    id: "dify-chatbot"
+    # 仅在 about 页面显示
+    pages:
+      - about
+```
+
+**特性：**
+- ✅ iframe 嵌入式展示
+- ✅ 支持语音输入（麦克风权限）
+- ✅ 仅在关于页面显示（按页面过滤）
+- ✅ 响应式设计，最小高度 700px
+
+#### 其他集成方式
+
+##### 方式 1：悬浮聊天窗口（全站）
 
 ```yaml
 integrations:
@@ -193,9 +220,10 @@ integrations:
     type: iframe
     url: "https://cloud.dify.ai/chatbot/your-bot-id"
     style: "position: fixed; bottom: 20px; right: 20px; width: 350px; height: 500px; border: none; box-shadow: 0 2px 10px rgba(0,0,0,0.2); z-index: 9999;"
+    # 不设置 pages 参数，则在所有页面显示
 ```
 
-#### 方式 2：嵌入式脚本（script）
+##### 方式 2：嵌入式脚本（script）
 
 ```yaml
 integrations:
@@ -412,6 +440,21 @@ Copyright (c) 2015-present Huxpro
 ---
 
 ## 更新日志
+
+### v2.1.0 (2025-11-03)
+
+**Dify AI 助手上线**
+- ✅ 在关于页面成功集成 Dify AI 助手
+- ✨ 支持按页面过滤显示（仅在 about 页面显示）
+- 🎤 启用麦克风权限，支持语音输入
+- 📱 响应式设计，最小高度 700px
+- 🔧 更新 `custom-scripts.html` 支持页面级过滤
+- 📝 完善文档，添加实际配置示例
+
+**优化改进**
+- ♻️ 重构 `about.html`，使用统一的评论集成模块
+- 📖 更新 README.md，添加 Dify 实际配置和使用说明
+- 🎨 优化 AI 助手展示区域的布局和提示文本
 
 ### v2.0.0 (2025-11-02)
 
